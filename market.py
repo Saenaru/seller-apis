@@ -22,14 +22,14 @@ def get_product_list(page, campaign_id, access_token):
         access_token (str): Токен доступа API Яндекс.Маркета.
 
     Returns:
-        dict: JSON-объект с результатами маппинга товаров.
+        list: Список товаров, полученных из маппинга (если существует в ответе API).
 
     Raises:
         HTTPError: Возникает, если запрос не был успешным.
 
     Example:
         >>> get_product_list("some_page_token", "campaign_123", "access_token_abc")
-        {'result': [...]}
+        [...]
 
     Exception Example:
         >>> get_product_list("", "campaign_123", None)
